@@ -1,0 +1,28 @@
+body{
+	background-color:#333;
+}
+
+.jumbotron{
+	background: url(img/header.jpg) no-repeat;
+	background-position:right 10%;
+	background-color:black;
+	color:white;
+	margin-bottom:0;
+}
+
+#midnav{
+	border-top-left-radius:0;
+	border-top-right-radius:0;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+}
+
+#nav{
+	color:white;
+}
+
+@media (max-width:1200px){
+	#header{
+		background-color:rgba(0,0,0,0.8);
+	}
+}
