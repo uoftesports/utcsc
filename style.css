@@ -1,10 +1,11 @@
 html{
-	background: #000 url(img/skyline.jpg) no-repeat;
+	background: #000 url(img/skyline.jpg) no-repeat fixed;
+	height:100%;
 }
 
 body{
 	height:100%;
-	background-color:rgba(0,0,0,0.8);
+	background: rgba(0,0,0,0);
 }
 
 .jumbotron{
@@ -32,7 +33,7 @@ body{
 	}
 }
 
-#subannc, #teamers div table, #standers div table{
+#subannc, #teamers div table tr, #standers div table tr, #schedulers div table tr{
 	color:#e5e5e5;
 }
 
@@ -63,8 +64,14 @@ h2 small{
 	background-color:rgba(0,0,0,0.9);
 }
 
-#teamers, #standers{
+#schedulers h1, #teamers h1, #standers h1{
 	color:white;
+}
+
+#teamers, #standers, #schedulers{
 	display:none;
 	margin-bottom:40px;
+}
+#csle, #staffers, #eventers{
+	display:none;
 }

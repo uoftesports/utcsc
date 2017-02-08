@@ -6,7 +6,6 @@ function init(){
 }
 
 function showInfo(data, tabletop){
-	console.log(data);
 	for (var i = 0; i < data.Sheet1.elements.length; i++){
 		var obj = data.Sheet1.elements[i];
 		var toAdd = '<tr>';
@@ -29,12 +28,32 @@ function showInfo(data, tabletop){
 		var obj = data.Sheet2.elements[i];
 		var toAdd = '<tr>';
 		for (var key in obj){
-			var attrName = key;
 			var attrValue = obj[key];
 			toAdd += '<td>' + attrValue + '</td>';
 		}
 		toAdd += '</tr>';
 		document.getElementById("standtable").innerHTML += toAdd;
+	}
+
+	for (var i = 0; i < data.Sheet3.elements.length; i++){
+		var obj = data.Sheet3.elements[i];
+		var toAdd = '<tr>'
+		for (var key in obj){
+			if (i < 3){
+				toAdd += '<td style="background-color:rgba(255, 0,29, 0.1)">' + obj[key] + '</td>'
+			}else if (i >= 3 && i < 6) {
+				toAdd += '<td style="background-color:rgba(0, 255, 72, 0.1)">' + obj[key] + '</td>'
+			}else{
+				toAdd += '<td>' + obj[key] + '</td>'
+			}
+			
+		}
+		toAdd += '</tr>';
+		
+		if ((i+1) % 3 === 0){
+			toAdd += '<tr><td></td><td></td><td></td><td></td><td></td></tr>';
+		}
+		document.getElementById("schbody").innerHTML += toAdd;	
 	}
 }
 
