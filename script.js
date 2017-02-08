@@ -55,81 +55,21 @@ if(window.location.hash){
 }
 
 
-$("#annc").on('click touchstart', function(){onAnnouncements();});
-$("#teams").on('click touchstart', function(){onTeams()});
-$("#sched").on('click touchstart', function(){onSchedule()});
-$("#standings").on('click touchstart', function(){onStandings()});
-$("#csl").on('click touchstart', function(){onCSL()});
-$("#events").on('click touchstart', function(){onEvents()});
-$("#staff").on('click touchstart', function(){onStaff()});
+$("#annc").on('click touchstart', function(){openTab("#annc", "#announcements")});
+$("#teams").on('click touchstart', function(){openTab("#int", "#teamers")});
+$("#sched").on('click touchstart', function(){openTab("#int", "#schedulers")});
+$("#standings").on('click touchstart', function(){openTab("#int", "#standers")});
+$("#csl").on('click touchstart', function(){openTab("#csl", "#csle")});
+$("#events").on('click touchstart', function(){openTab("#events", "#eventers")});
+$("#staff").on('click touchstart', function(){openTab("#staff", "#staffers")});
 
 
-
-//announcements
-function onAnnouncements(){
-	toggleOn("#annc");
+function openTab(tab, page){
+	toggleOn(tab);
 	$(this.currentPage).fadeOut();
 	setTimeout(function(){
-		$("#announcements").fadeIn();
+		$(page).fadeIn();
 	}, 400);
-	this.currentPage = "#announcements";
-	//toggle jekyll form
-}
+	this.currentPage = page;
 
-//intramurals
-function onTeams(){
-	toggleOn("#int");
-	$(this.currentPage).fadeOut();
-	setTimeout(function(){
-		$("#teamers").fadeIn();
-	}, 400);
-	this.currentPage = "#teamers";
-}
-
-function onSchedule(){
-	toggleOn("#int");
-	$(this.currentPage).fadeOut();
-	setTimeout(function(){
-		$("#schedulers").fadeIn();
-	}, 400);
-	this.currentPage = "#schedulers";
-}
-
-function onStandings(){
-	toggleOn("#int");
-	$(this.currentPage).fadeOut();
-	setTimeout(function(){
-		$("#standers").fadeIn();
-	}, 400);
-	this.currentPage = "#standers";
-}
-
-//CSL
-function onCSL(){
-	toggleOn("#csl");
-	$(this.currentPage).fadeOut();
-	setTimeout(function(){
-		$("#csle").fadeIn();
-	}, 400);
-	this.currentPage = "#csle";
-}
-
-//EVENTS
-function onEvents(){
-	toggleOn("#events");
-	$(this.currentPage).fadeOut();
-	setTimeout(function(){
-		$("#eventers").fadeIn();
-	}, 400);
-	this.currentPage = "#eventers";
-}
-
-//STAFF
-function onStaff(){
-	toggleOn("#staff");
-	$(this.currentPage).fadeOut();
-	setTimeout(function(){
-		$("#staffers").fadeIn();
-	}, 400);
-	this.currentPage = "#staffers";
 }
