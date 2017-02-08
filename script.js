@@ -1,6 +1,7 @@
 
 //helper functions
 var currentTab = "#annc";
+var currentPage = "#announcements";
 function toggleOn(on){
 	$(this.currentTab).removeClass("active");
 	$(on).addClass("active");
@@ -20,13 +21,18 @@ $("#staff").on('click touchstart', function(){onStaff()});
 //announcements
 function onAnnouncements(){
 	toggleOn("#annc");
+	$(this.currentPage).fadeOut();
+	$("#announcements").fadeIn();
+	this.currentPage = "#announcements";
 	//toggle jekyll form
 }
 
 //intramurals
 function onTeams(){
 	toggleOn("#int");
-	//show simple html for teams
+	$(this.currentPage).fadeOut();
+	$("#teamers").fadeIn();
+	this.currentPage = "#teamers";
 }
 
 function onSchedule(){
