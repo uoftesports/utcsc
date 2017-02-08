@@ -1,5 +1,10 @@
+html{
+	background: #000 url(img/skyline.jpg) no-repeat;
+}
+
 body{
-	background-color:#333;
+	height:100%;
+	background-color:rgba(0,0,0,0.8);
 }
 
 .jumbotron{
@@ -27,12 +32,14 @@ body{
 	}
 }
 
-#subannc, #teamers div table{
+#subannc, #teamers div table, #standers div table{
 	color:#e5e5e5;
 }
+
 #announcements{
 	margin-top:10px;
 	color:white;
+	display:none;
 }
 
 .pager li a{
@@ -47,7 +54,17 @@ h2 small{
 	font-size:16px;
 }
 
-#teamers{
+.block{
+	padding:5px 40px 10px 40px;
+	border-style:solid;
+	border-width:1px;
+	border-color:white;
+	border-radius:10px;
+	background-color:rgba(0,0,0,0.9);
+}
+
+#teamers, #standers{
 	color:white;
 	display:none;
+	margin-bottom:40px;
 }

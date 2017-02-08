@@ -29,27 +29,29 @@
 		</div>
 		<nav id="midnav" class="navbar navbar-default">
 			<div class="container">
-				<ul id="nav" class="nav navbar-nav">
-					<a class="navbar-brand" target="_blank" href="http://uoftesports.me/">
+				<div class="navbar-header">
+				<a class="navbar-brand" target="_blank" href="http://uoftesports.me/">
        					<p>UofT eSports</p>
      				</a>
+				</div>
+				<ul id="nav" class="nav navbar-nav">
 					<li id="annc" class="active"><a href="#">Announcements</a></li>
 					<li id="int" class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Intramurals <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a id="teams">Teams</a></li>
-							<li><a id="sched">Schedule</a></li>
-							<li><a id="standings">Standings</a></li>
+							<li><a href="#teams" id="teams">Teams</a></li>
+							<li><a href="#sched" id="sched">Schedule</a></li>
+							<li><a href="#standings" id="standings">Standings</a></li>
 							<li><a id="demos" target="_blank" href="https://drive.google.com/drive/folders/0B2pdVlyB-hHxaTljOEpaU1RoRFU">Demos</a></li>
 						</ul>
 					</li>
-					<li id="csl" ><a href="#">CSL</a></li>
-					<li id="events"><a href="#">Events</a></li>
-					<li id="staff"><a href="#">Staff</a></li>
+					<li id="csl" ><a href="#csl">CSL</a></li>
+					<li id="events"><a href="#events">Events</a></li>
+					<li id="staff"><a href="#staff">Staff</a></li>
 				</ul>
 			</div>
 		</nav>
-		<div id="announcements" class="container">
+		<div id="announcements" class="container block">
 			<h1 id="ann_head">Announcements</h1>
 			<div id="subannc">
 			<h2 id="ann_title1">Thank you! <small>February 6, 2017</small></h2>
@@ -85,8 +87,8 @@
 			</nav>
 		</div>
 
-		<div id="teamers" class="container">
-			<h1>Teams</h1>
+		<div id="teamers" class="container block">
+			<h1>WINTER2017// Teams</h1>
 			<div class="table-responsive">
 				<table class="table">
 					<thead>
@@ -103,6 +105,23 @@
 				</table>
 			</div>
 		</div>
+
+		<div id="standers" class="container block">
+			<h1>WINTER2017// Standings</h1>
+			<div class="table-responsive">
+				<table class="table">
+					<thead>
+						<th>Team</th>
+						<th>Wins</th>
+						<th>Losses</th>
+						<th>Total Games</th>
+					</thead>
+					<tbody id="standtable">
+					</tbody>
+				</table>
+			</div>
+		</div>
+		
 		<script src="script.js"></script>
 		<script src="spreadsheets.js"></script>
 	</body>

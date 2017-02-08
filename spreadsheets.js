@@ -12,18 +12,29 @@ function showInfo(data, tabletop){
 		var toAdd = '<tr>';
 		for (var key in obj){
 			var attrName = key;
-			var attrValue = obj[key]
+			var attrValue = obj[key];
 			if (attrName.includes("Name") || attrName.includes("ID") || attrName.includes("Rank") || attrName.includes("Team") || attrName.includes("Campus")){
-				console.log(i + " " + key + "---" + attrValue);
-				toAdd += "<td>" + attrValue + "</td>";
+				toAdd += '<td>' + attrValue + '</td>';
 			}
 		}
-		toAdd += "</tr>";
+		toAdd += '</tr>';
 		
 		if ((i+1) % 5 === 0){
-			toAdd += "<tr><td></td><td></td><td></td><td></td><td></td></tr>";
+			toAdd += '<tr><td></td><td></td><td></td><td></td><td></td></tr>';
 		}
 		document.getElementById("teamtable").innerHTML += toAdd;
+	}
+
+	for (var i = 0; i < data.Sheet2.elements.length; i++){
+		var obj = data.Sheet2.elements[i];
+		var toAdd = '<tr>';
+		for (var key in obj){
+			var attrName = key;
+			var attrValue = obj[key];
+			toAdd += '<td>' + attrValue + '</td>';
+		}
+		toAdd += '</tr>';
+		document.getElementById("standtable").innerHTML += toAdd;
 	}
 }
 
