@@ -69,7 +69,9 @@ $("#staff").on('click touchstart', function(){onStaff()});
 function onAnnouncements(){
 	toggleOn("#annc");
 	$(this.currentPage).fadeOut();
-	$("#announcements").fadeIn();
+	setTimeout(function(){
+		$("#announcements").fadeIn();
+	}, 400);
 	this.currentPage = "#announcements";
 	//toggle jekyll form
 }
@@ -78,21 +80,27 @@ function onAnnouncements(){
 function onTeams(){
 	toggleOn("#int");
 	$(this.currentPage).fadeOut();
-	$("#teamers").fadeIn();
+	setTimeout(function(){
+		$("#teamers").fadeIn();
+	}, 400);
 	this.currentPage = "#teamers";
 }
 
 function onSchedule(){
 	toggleOn("#int");
 	$(this.currentPage).fadeOut();
-	$("#schedulers").fadeIn();
+	setTimeout(function(){
+		$("#schedulers").fadeIn();
+	}, 400);
 	this.currentPage = "#schedulers";
 }
 
 function onStandings(){
 	toggleOn("#int");
 	$(this.currentPage).fadeOut();
-	$("#standers").fadeIn();
+	setTimeout(function(){
+		$("#standers").fadeIn();
+	}, 400);
 	this.currentPage = "#standers";
 }
 
@@ -100,7 +108,9 @@ function onStandings(){
 function onCSL(){
 	toggleOn("#csl");
 	$(this.currentPage).fadeOut();
-	$("#csle").fadeIn();
+	setTimeout(function(){
+		$("#csle").fadeIn();
+	}, 400);
 	this.currentPage = "#csle";
 }
 
@@ -108,7 +118,9 @@ function onCSL(){
 function onEvents(){
 	toggleOn("#events");
 	$(this.currentPage).fadeOut();
-	$("#eventers").fadeIn();
+	setTimeout(function(){
+		$("#eventers").fadeIn();
+	}, 400);
 	this.currentPage = "#eventers";
 }
 
@@ -116,6 +128,8 @@ function onEvents(){
 function onStaff(){
 	toggleOn("#staff");
 	$(this.currentPage).fadeOut();
-	$("#staffers").fadeIn();
+	setTimeout(function(){
+		$("#staffers").fadeIn();
+	}, 400);
 	this.currentPage = "#staffers";
 }
