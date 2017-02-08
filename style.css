@@ -26,3 +26,27 @@ body{
 		background-color:rgba(0,0,0,0.8);
 	}
 }
+
+#subannc, #teams div table{
+	color:#e5e5e5;
+}
+#announcements{
+	margin-top:10px;
+	color:white;
+}
+
+.pager li a{
+	color:#333;
+}
+
+#botnav{
+	margin-top:20px;
+}
+
+h2 small{
+	font-size:16px;
+}
+
+#teams{
+	color:white;
+}
