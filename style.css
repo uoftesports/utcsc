@@ -157,6 +157,12 @@ h2 small{
 	margin-bottom:40px;
 }
 
+#footer center{
+	text-decoration:none;
+	color:#878787;
+	margin-bottom:0;
+}
+
 #footer{
 	margin-top:40px;
 	bottom:0;
