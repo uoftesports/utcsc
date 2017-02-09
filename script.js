@@ -52,6 +52,12 @@ if(window.location.hash){
 			this.currentTab = "#staff";
 			this.currentPage = "#staffers";
 			break;
+		case 'history':
+			toggleOn("#int");
+			$("#matchhistory").fadeIn();
+			this.currentTab = "#int";
+			this.currentPage = "#matchhistory";
+			break;
 	}
 }else{
 	//default
@@ -69,6 +75,7 @@ $("#stats").on('click touchstart', function(){openTab("#int", "#staters")});
 $("#csl").on('click touchstart', function(){openTab("#csl", "#csle")});
 $("#events").on('click touchstart', function(){openTab("#events", "#eventers")});
 $("#staff").on('click touchstart', function(){openTab("#staff", "#staffers")});
+$("#history").on('click touchstart', function(){openTab("#int", "#matchhistory")});
 
 
 function openTab(tab, page){

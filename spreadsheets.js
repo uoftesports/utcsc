@@ -99,6 +99,27 @@ function showInfo(data, tabletop){
 			}
 		}
 	}
+
+	//match history
+	for (var i = 0; i < data.Sheet7.elements.length; i++){
+		var obj = data.Sheet7.elements[i];
+		var toAdd = '<tr>'
+		for (var key in obj){
+			var attrValue = obj[key];
+			if (!key.includes("-")){
+				if (i < 3){ //this past week
+					toAdd += '<td style="background-color:rgba(0, 255, 72, 0.2)">' + attrValue + '</td>';
+				}else{
+					toAdd += '<td>' + attrValue + '</td>';
+				}
+			}
+		}
+		toAdd +='</tr>'
+		if ((i+1) % 3 === 0){ //breaks
+			toAdd += '<tr><td><td></td><td></td><td></td><td></td><td></td></tr>';
+		}
+		document.getElementById("matchtable").innerHTML += toAdd;
+	}
 }
 
 window.addEventListener('DOMContentLoaded', init);
