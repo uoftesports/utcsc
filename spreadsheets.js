@@ -6,6 +6,9 @@ function init(){
 }
 
 function showInfo(data, tabletop){
+	console.log(data);
+
+	//teams
 	for (var i = 0; i < data.Sheet1.elements.length; i++){
 		var obj = data.Sheet1.elements[i];
 		var toAdd = '<tr>';
@@ -18,12 +21,13 @@ function showInfo(data, tabletop){
 		}
 		toAdd += '</tr>';
 		
-		if ((i+1) % 5 === 0){
+		if ((i+1) % 5 === 0){ //breaks
 			toAdd += '<tr><td></td><td></td><td></td><td></td><td></td></tr>';
 		}
 		document.getElementById("teamtable").innerHTML += toAdd;
 	}
 
+	//standings
 	for (var i = 0; i < data.Sheet2.elements.length; i++){
 		var obj = data.Sheet2.elements[i];
 		var toAdd = '<tr>';
@@ -35,6 +39,7 @@ function showInfo(data, tabletop){
 		document.getElementById("standtable").innerHTML += toAdd;
 	}
 
+	//schedule
 	for (var i = 0; i < data.Sheet3.elements.length; i++){
 		var obj = data.Sheet3.elements[i];
 		var toAdd = '<tr>'
@@ -50,10 +55,49 @@ function showInfo(data, tabletop){
 		}
 		toAdd += '</tr>';
 		
-		if ((i+1) % 3 === 0){
+		if ((i+1) % 3 === 0){ //breaks
 			toAdd += '<tr><td></td><td></td><td></td><td></td><td></td></tr>';
 		}
 		document.getElementById("schbody").innerHTML += toAdd;	
+	}
+
+	//stats
+	for (var i = 0; i < data.Sheet5.elements.length; i++){
+		var obj = data.Sheet5.elements[i];
+		var toAdd = '<tr>'
+		for (var key in obj){
+			var attrValue = obj[key];
+			if (!key.includes("SteamID")){
+				toAdd += '<td>' + attrValue + '</td>';
+			}
+		}
+		toAdd += '</tr>'
+
+		if ((i+1) % 5 === 0){ //breaks
+			toAdd += '<tr><td></td><td></td><td></td><td><td></td><td></td></td><td></td><td></td><td></td><td></td></tr>';
+		}
+		document.getElementById("statstable").innerHTML += toAdd;
+	}
+
+	//top stats
+	for (var i = 0; i < data.Sheet6.elements.length; i++){
+		var obj = data.Sheet6.elements[i];
+		for (var key in obj){
+			var attrValue = obj[key];
+			if (key.includes("Kills")){
+				document.getElementById("mostkills").innerHTML += attrValue + " ";
+			}else if (key.includes("K/D")){
+				document.getElementById("highestkd").innerHTML += attrValue + " ";
+			}else if (key.includes("KPR")){
+				document.getElementById("highestkpr").innerHTML += attrValue + " ";
+			}else if (key.includes("Assists")){
+				document.getElementById("mostassists").innerHTML += attrValue + " ";
+			}else if (key.includes("%")){
+				document.getElementById("highesths").innerHTML += attrValue + " ";
+			}else if (key.includes("Deaths")){
+				document.getElementById("mostdeaths").innerHTML += attrValue + " ";
+			}
+		}
 	}
 }
 

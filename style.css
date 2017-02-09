@@ -9,8 +9,8 @@ body{
 }
 
 .jumbotron{
-	background: url(img/header.jpg) no-repeat;
-	background-position:right 10%;
+	background: url(img/header.png) no-repeat;
+	background-position:center center;
 	background-color:black;
 	color:white;
 	margin-bottom:0;
@@ -23,24 +23,39 @@ body{
 	border-bottom-right-radius:10px;
 }
 
+.titles{
+	opacity:0;
+}
+
 #nav{
 	color:white;
 }
 
 @media (max-width:1200px){
+	.titles{
+		opacity:1;
+	}
+}
+@media (max-width:1200px){
+	
 	#header{
 		background-color:rgba(0,0,0,0.8);
 	}
 }
 
-#subannc, #teamers div table tr, #standers div table tr, #schedulers div table tr{
+#subannc, #teamers div table tr, #standers div table tr, #schedulers div table tr, #staters div table tr{
 	color:#e5e5e5;
+}
+
+#csle a, #eventers a{
+	text-decoration:none;
 }
 
 #announcements{
 	margin-top:10px;
 	color:white;
 	display:none;
+	padding-bottom:20px; /*remove once more announcements are added*/
 }
 
 .pager li a{
@@ -64,14 +79,80 @@ h2 small{
 	background-color:rgba(0,0,0,0.9);
 }
 
-#schedulers h1, #teamers h1, #standers h1, #eventers h1, #staffers h1, #csle h1{
+#schedulers h1, .event h2, .event h5, #staters h2, #staters h3, #teamers h1, #standers h1, #eventers h1, #staffers h1, #csle h1, #staters h1, #csle p{
 	color:white;
 }
 
-#teamers, #standers, #schedulers{
+#teamers, #standers, #schedulers, #csle, #staffers, #eventers, #staters{
 	display:none;
 	margin-bottom:40px;
 }
-#csle, #staffers, #eventers{
-	display:none;
+
+.statgif{
+	width:240px;
+	height:200px;
+}
+
+#topstats{
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:row;
+	justify-content:center;
+	margin-top:30px;
+}
+
+#eventers p{
+	margin-top:20px;
+	color:#e5e5e5;
+}
+
+.stat{
+	display:flex;
+	flex-direction:column;
+	padding:0 40px 0 40px;
+}
+
+.profiles{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:center;
+
+}
+
+.pic{
+	width:250px;
+	height:250px;
+	border: solid 1px white;
+	object-fit:cover;
+}
+
+.person{
+	padding:20px;
+	color:white;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+#topstats h4{
+	color:#d6d6d6;
+	margin-top:0;
+	margin-bottom:30px;
+}
+
+.event{
+	padding:20px;
+	border-radius:20px;
+	margin-bottom:20px;
+}
+
+/*TO UPDATE REGULARLY*/
+
+.over{
+	background-color:rgba(255, 0,29, 0.1);
+}
+
+.available{
+	background-color:rgba(0, 255, 72, 0.1)
 }

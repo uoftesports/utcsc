@@ -28,6 +28,12 @@ if(window.location.hash){
 			this.currentTab = "#int";
 			this.currentPage = "#standers";
 			break;
+		case 'stats':
+			toggleOn("#int");
+			$("#staters").fadeIn();
+			this.currentTab = "#int";
+			this.currentPage = "#staters";
+			break;
 		case 'csl':
 			toggleOn("#csl");
 			$("#csle").fadeIn();
@@ -59,6 +65,7 @@ $("#annc").on('click touchstart', function(){openTab("#annc", "#announcements")}
 $("#teams").on('click touchstart', function(){openTab("#int", "#teamers")});
 $("#sched").on('click touchstart', function(){openTab("#int", "#schedulers")});
 $("#standings").on('click touchstart', function(){openTab("#int", "#standers")});
+$("#stats").on('click touchstart', function(){openTab("#int", "#staters")});
 $("#csl").on('click touchstart', function(){openTab("#csl", "#csle")});
 $("#events").on('click touchstart', function(){openTab("#events", "#eventers")});
 $("#staff").on('click touchstart', function(){openTab("#staff", "#staffers")});
