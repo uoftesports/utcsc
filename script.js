@@ -16,7 +16,7 @@ if(window.location.hash){
 			this.currentTab = "#int";
 			this.currentPage = "#teamers";
 			break;
-		case 'schedule':
+		case 'sched':
 			toggleOn("#int");
 			$("#schedulers").fadeIn();
 			this.currentTab = "#int";
