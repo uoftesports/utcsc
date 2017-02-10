@@ -23,23 +23,64 @@ body{
 	border-bottom-right-radius:10px;
 }
 
-.titles{
-	opacity:0;
+#nav li a .caret{
+	border-top:4px solid white;
+}
+/* navbar */
+.navbar-default {
+    background-color: rgba(255,255,255,0.3);
+    border-color: rgba(255,255,255,0.1);
+}
+/* title */
+.navbar-default .navbar-brand {
+    color: white;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #ddd;
+}
+/* link */
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: white;
+    background-color:rgba(255,255,255,0.1);
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: white;
+    background-color: rgba(255,255,255,0.3);
+}
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+    color: white;
+    background-color: rgba(255,255,255,0.2);
+}
+/* caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #777;
+    border-bottom-color: #777;
 }
 
+h1, h2{
+	font-family: 'Roboto Condensed', sans-serif;
+}
 #nav{
+	font-size:15px;
 	color:white;
 }
-
-@media (max-width:1200px){
-	.titles{
-		opacity:1;
-	}
+#nav{
+	font-family: 'Roboto Condensed', sans-serif;
 }
-@media (max-width:1200px){
+
+@media (max-width:767px){
 	
-	#header{
-		background-color:rgba(0,0,0,0.8);
+	.jumbotron{
+		background:url(img/header_dark.png) no-repeat center center;
 	}
 }
 
@@ -125,6 +166,7 @@ h2 small{
 	height:250px;
 	border: solid 1px white;
 	object-fit:cover;
+	border-radius:12px;
 }
 
 .person{
@@ -140,11 +182,14 @@ h2 small{
 	margin-top:0;
 	margin-bottom:30px;
 }
-
+#midnav div a p{
+	font-family: 'Roboto Condensed', sans-serif;
+}
 .event{
 	padding:20px;
 	border-radius:20px;
 	margin-bottom:20px;
+	padding-top:7px;
 }
 
 #footer a, #footer p{
@@ -183,12 +228,17 @@ h2 small{
 	width:30px;
 	height:auto;
 	margin-right:3px;
+	transition:0.3s;
 }
 #discord{
 	width:40px;
 	height:auto;
 	margin-top:-3px;
 	margin-left:3px;
+	transition:0.3s;
+}
+#fb:hover, #discord:hover{
+	opacity:0.3;
 }
 #matchhistory{
 	color:white;
