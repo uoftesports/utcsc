@@ -44,9 +44,9 @@ function showInfo(data, tabletop){
 		var obj = data.Sheet3.elements[i];
 		var toAdd = '<tr>'
 		for (var key in obj){
-			if (i < 3){ //past weeks
+			if (i < 6){ //past weeks
 				toAdd += '<td style="background-color:rgba(255, 0,29, 0.2)">' + obj[key] + '</td>'
-			}else if (i >= 3 && i < 6) { //this week
+			}else if (i >= 6 && i < 9) { //this week
 				toAdd += '<td style="background-color:rgba(0, 255, 72, 0.2)">' + obj[key] + '</td>'
 			}else{
 				toAdd += '<td>' + obj[key] + '</td>'
