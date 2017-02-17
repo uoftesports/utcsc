@@ -107,7 +107,7 @@ function showInfo(data, tabletop){
 		for (var key in obj){
 			var attrValue = obj[key];
 			if (!key.includes("-")){
-				if (i < 3){ //this past week
+				if (i < 6){ //this past week
 					toAdd += '<td style="background-color:rgba(0, 255, 72, 0.2)">' + attrValue + '</td>';
 				}else{
 					toAdd += '<td>' + attrValue + '</td>';
