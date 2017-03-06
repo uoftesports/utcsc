@@ -44,9 +44,9 @@ function showInfo(data, tabletop){
 		var obj = data.Sheet3.elements[i];
 		var toAdd = '<tr>'
 		for (var key in obj){
-			if (i < 12){ //past weeks
+			if (i < 15){ //past weeks
 				toAdd += '<td style="background-color:rgba(255, 0,29, 0.2)">' + obj[key] + '</td>'
-			}else if (i >= 12 && i < 15) { //this week
+			}else if (i >= 15 && i < 18) { //this week
 				toAdd += '<td style="background-color:rgba(0, 255, 72, 0.2)">' + obj[key] + '</td>'
 			}else{
 				toAdd += '<td>' + obj[key] + '</td>'
@@ -107,7 +107,7 @@ function showInfo(data, tabletop){
 		for (var key in obj){
 			var attrValue = obj[key];
 			if (!key.includes("-")){
-				if (i < 12){ //this past week
+				if (i < 15){ //this past week
 					toAdd += '<td style="background-color:rgba(0, 255, 72, 0.2)">' + attrValue + '</td>';
 				}else{
 					toAdd += '<td>' + attrValue + '</td>';
