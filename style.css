@@ -6,6 +6,7 @@ html{
 body{
 	height:100%;
 	background: rgba(0,0,0,0);
+	color:white;
 }
 
 .jumbotron{
@@ -92,6 +93,12 @@ h1, h2{
 	text-decoration:none;
 }
 
+#connect{
+	text-decoration:none;
+	color:#e5e5e5;
+}
+.tab { margin-left: 10px; }
+
 #announcements{
 	margin-top:10px;
 	color:white;
@@ -120,11 +127,11 @@ h2 small{
 	background-color:rgba(0,0,0,0.9);
 }
 
-#schedulers h1, .event h2, .event h5, #staters h2, #staters h3, #teamers h1, #standers h1, #eventers h1, #staffers h1, #csle h1, #staters h1, #csle p{
+#schedulers h1, .event h2, .event h5, #staters h2, #staters h3, #teamers h1, #standers h1, #eventers h1, #staffers h1, #csle h1, #staters h1, #csle p, #playoffs h1{
 	color:white;
 }
 
-#teamers, #standers, #schedulers, #csle, #staffers, #eventers, #staters, #matchhistory{
+#teamers, #standers, #schedulers, #csle, #staffers, #eventers, #staters, #matchhistory, #playoffs{
 	display:none;
 	margin-bottom:40px;
 }

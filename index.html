@@ -6,7 +6,7 @@
 
 		<!--CSS/Style-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" href="style.css?version=1.5" type="text/css" />
+		<link rel="stylesheet" href="style.css?version=1.6" type="text/css" />
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 
 
@@ -38,11 +38,12 @@
 				<ul id="nav" class="nav navbar-nav">
 					<li id="annc" class="active"><a href="#">Announcements</a></li>
 					<li id="int" class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Intramurals<span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">S4 Intramurals<span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="#teams" id="teams">teams</a></li>
-							<li><a href="#sched" id="sched">schedule</a></li>
-							<li><a href="#history" id="history">match history</a></li>
+							<li><a href="#playoffs" id="playoff">playoffs</a></li>
+							<li><a href="#sched" id="sched"><s>schedule</s></a></li>
+							<li><a href="#history" id="history"><s>match history</s></a></li>
 							<li><a href="#standings" id="standings">standings</a></li>
 							<li><a href="#stats" id="stats">stats</a></li>
 							<li><a id="demos" target="_blank" href="https://drive.google.com/drive/folders/0B2pdVlyB-hHxaTljOEpaU1RoRFU">demos</a></li>
@@ -57,6 +58,21 @@
 		<div id="announcements" class="container block">
 			<h1 id="ann_head">Announcements</h1>
 			<div id="subannc">
+
+			<h2 id="ann_title1">Playoffs! <small>March 25 to April 1, 2017</small></h2>
+			<h5><a href="https://www.facebook.com/simon.w.zhang?fref=nf"><span class="label label-default">Simon Zhang</span></a></h5>
+			<p id="ann_content">Quarterfinals: Bo3, Saturday March 25th 1pm to 4pm<br>
+				Semifinals: Bo3, Sunday March 26th 1pm to 4pm<br>
+				Finals: Bo3, Saturday April 1st (no its not april fools) 8pm to 11pm<br><br>
+				Essentially, the above times are the default match times. Match times can be negotiated with your respective teams, but we'd ask that you would notify one of the CSGO staff members and that all matches need to be completed by 11pm in their respective days. If your team needs subs, then please refer to the sublist in the intramural sheet.<br><br>
+				Rules for subs:<br>
+				Please find a sub if you realize that you cannot make it. We're being more strict with subs in the playoffs, teams can only use subs that are not on other teams in the intramural or from teams that have been eliminated. You can find subs in the sublist in the intramural sheet in the "Team List" tab.<br><br>
+				See Intramurals>Playoffs or check out the google spreadsheet below for more information.
+			</p>
+			<div class="btn-group" role="group">
+				<a type="button" class="btn btn-default" href="https://docs.google.com/spreadsheets/d/1OWZoao9vexJOWqiTkng_Y0QprajFx8-I6jgTPDeMuF4/edit#gid=557337825" target="_blank">Google Spreadsheets</a>
+			</div>
+
 			<h2 id="ann_title1">1v1 Event <small>March 1, 2017</small></h2>
 			<h5><a href="https://www.facebook.com/raymond.chen.710"><span class="label label-default">Raymond Chen</span></a></h5>
 			<p id="ann_content">Sorry for posting this so late, but UTES is hosting an event with the CSSU this Friday<br>
@@ -295,6 +311,21 @@
 			</div>
 		</div>
 
+		<div id="playoffs" class="container block">
+		<h1>S4 Playoff Bracket</h1>
+		<iframe src="http://challonge.com/UTCSCintramuralWINTER2017/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+		<h2 id="ann_title1">Servers</h2>
+			<h5>(click to connect)</h5>
+			<p id="connect" >1pm - 2:30pm // Match 1: Literally Who vs EPK</p>
+			<a id="connect" class="tab" target="_blank" href="steam://connect/gilly.dathost.net:27023/pls"><p id="ann_content">Server 1: password pls; connect gilly.dathost.net:27023</p></a>
+			<br><br>
+			<p id="connect" >2:30pm - 4pm // Match 2: Winner of (Baiteam v. 5Head) vs Das Auto</p>
+			<a id="connect" class="tab"  target="_blank" href="steam://connect/gilly.dathost.net:27055/pls"><p id="ann_content">Server 2: password pls; connect gilly.dathost.net:27055</p></a>
+			<br><br>
+			<p id="connect" >8pm-11pm // FINALS: Winner of (Literally Who v. EPK) vs Winner of (Winner of (Baiteam v. 5Head) vs Das Auto)</p>
+			<a id="connect" class="tab"  target="_blank" href="steam://connect/gilly.dathost.net:27108/pls"><p id="ann_content">Server 3: password pls; connect robert.dathost.net:27108</p></a>
+		</div>
+
 		<!--JavaScript Generated HTML-->
 
 		<div id="teamers" class="container block">
@@ -433,8 +464,8 @@
 			<a target="_blank" href="http://jaruserickson.com/"><p>designed by jacob erickson in 2017</p></a>
 		</div>
 
-		<script src="script.js?version=1.4"></script>
-		<script src="spreadsheets.js?version=1.8"></script>
+		<script src="script.js?version=1.5"></script>
+		<script src="spreadsheets.js?version=1.9"></script>
 		<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

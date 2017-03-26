@@ -58,6 +58,11 @@ if(window.location.hash){
 			this.currentTab = "#int";
 			this.currentPage = "#matchhistory";
 			break;
+		case 'playoffs':
+			toggleOn("#int");
+			$("#playoffs").fadeIn();
+			this.currentTab = "#int";
+			this.currentPage = "#playoffs";
 	}
 }else{
 	//default
@@ -76,6 +81,8 @@ $("#csl").on('click touchend', function(){openTab("#csl", "#csle")});
 $("#events").on('click touchend', function(){openTab("#events", "#eventers")});
 $("#staff").on('click touchend', function(){openTab("#staff", "#staffers")});
 $("#history").on('click touchend', function(){openTab("#int", "#matchhistory")});
+
+$("#playoff").on('click touchend', function(){openTab("#int", "#playoffs")});
 
 
 function openTab(tab, page){
