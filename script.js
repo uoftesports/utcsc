@@ -72,17 +72,17 @@ if(window.location.hash){
 }
 
 
-$("#annc").on('click touchend', function(){openTab("#annc", "#announcements")});
-$("#teams").on('click touchend', function(){openTab("#int", "#teamers")});
-$("#sched").on('click touchend', function(){openTab("#int", "#schedulers")});
-$("#standings").on('click touchend', function(){openTab("#int", "#standers")});
-$("#stats").on('click touchend', function(){openTab("#int", "#staters")});
-$("#csl").on('click touchend', function(){openTab("#csl", "#csle")});
-$("#events").on('click touchend', function(){openTab("#events", "#eventers")});
-$("#staff").on('click touchend', function(){openTab("#staff", "#staffers")});
-$("#history").on('click touchend', function(){openTab("#int", "#matchhistory")});
+$("#annc").on('click touch', function(){openTab("#annc", "#announcements")});
+$("#teams").on('click touch', function(){openTab("#int", "#teamers")});
+$("#sched").on('click touch', function(){openTab("#int", "#schedulers")});
+$("#standings").on('click touch', function(){openTab("#int", "#standers")});
+$("#stats").on('click touch', function(){openTab("#int", "#staters")});
+$("#csl").on('click touch', function(){openTab("#csl", "#csle")});
+$("#events").on('click touch', function(){openTab("#events", "#eventers")});
+$("#staff").on('click touch', function(){openTab("#staff", "#staffers")});
+$("#history").on('click touch', function(){openTab("#int", "#matchhistory")});
 
-$("#playoff").on('click touchend', function(){openTab("#int", "#playoffs")});
+$("#playoff").on('click touch', function(){openTab("#int", "#playoffs")});
 
 
 function openTab(tab, page){
